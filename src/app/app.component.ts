@@ -1,12 +1,16 @@
+
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { EmployeeListComponent } from './employee-list/employee-list.component'; 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [EmployeeListComponent, RouterOutlet, RouterModule] 
 })
-export class AppComponent {
-  title = 'angular-frontend';
+export class AppComponent { 
+  title = 'Anggular and Bootstrap Assignment';
 }
+
